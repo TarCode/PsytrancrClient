@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class = "featureHeader">Featured</h2>
+	<div class = "container">
+		{{#events}}
+				<a class = "eventAnc" href = "/events/{{event_id}}">
+					<div class = "featureContent col-xs-6 col-md-4">
+						<div class = "col-xs-12 col-md-12">
+							<img class = "partyImg img-responsive" src = "http://localhost:3000{{img_url}}"/>
+						</div>
+						<div class = "nameBox col-xs-12 col-md-12">
+						</br>
+							<h2 class = "eventHeader">{{event_name}}</h2>
+						</br>
+						</div>
+					</div>
+				</a>
+
+		{{/events}}
+		</div>
+
+</div>
