@@ -1,21 +1,23 @@
 <div class="container">
-  <h2 class = "featureHeader">Featured</h2>
-	<div class = "container">
-		{{#events}}
-				<a class = "eventAnc" href = "/events/{{event_id}}">
-					<div class = "featureContent col-xs-6 col-md-4">
-						<div class = "col-xs-12 col-md-12">
-							<img class = "partyImg img-responsive" src = "http://localhost:3000{{img_url}}"/>
-						</div>
-						<div class = "nameBox col-xs-12 col-md-12">
-						</br>
-							<h2 class = "eventHeader">{{event_name}}</h2>
-						</br>
-						</div>
-					</div>
-				</a>
-
-		{{/events}}
-		</div>
+  <div class="row">
+    {{#events}}
+    <div class="col s6 m4">
+     <div class="card purple lighten-1">
+       <a href="/events/{{event_id}}">
+         <div class="card-image">
+           <img src="http://localhost:3000{{img_url}}">
+           <span class="grey darken-4 card-title">{{event_name}}</span>
+         </div>
+       </a>
+       <div class="card-content">
+         <p>Date: {{startDate}} - {{endDate}}</p>
+       </div>
+       <div class="center-align card-action">
+         <a class = " purple darken-4 btn waves-effect waves-light" href="/events/{{event_id}}">View <i class="material-icons right">send</i></a>
+       </div>
+     </div>
+    </div>
+    {{/events}}
+  </div>
 
 </div>
